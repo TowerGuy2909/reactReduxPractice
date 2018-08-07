@@ -8,6 +8,21 @@ const reducer = (state = initialState, action) => {
             counter: state.counter + 1
         }
     }
+    if (action.type === 'DEINCREMENT'){
+        return {
+            counter: state.counter - 1
+        }
+    }
+    if (action.type === 'ADDFIVE'){
+        return {
+            counter: state.counter + 5
+        }
+    }
+    if (action.type === 'SUBTRACTFIVE'){
+        return {
+            counter: state.counter - 5
+        }
+    }
     return state;
 }
 
