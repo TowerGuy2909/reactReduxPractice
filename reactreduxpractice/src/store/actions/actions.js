@@ -27,11 +27,23 @@ export const subtract = (value) => {
         val: value
     }
 }
-export const storeResult = (res) => {
+
+export const saveResult = (res) => {
     return {
         type: STORE_RESULT,
         result: res
-    }
+    };
+}
+
+export const storeResult = (res) => {
+    return dispatch => {
+        setTimeout(() => {
+            //simulating async calls like to a server
+            dispatch(saveResult(res));
+        },2000);
+    };
+   
+    return 
 }
 export const deleteResult = (resElId) => {
     return {
